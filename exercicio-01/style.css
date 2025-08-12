@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF3097;
+    color: aliceblue;
+    border: 2px solid #FF3097;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+button:hover {
+    background-color: aliceblue;
+    color: #FF3097;
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+}

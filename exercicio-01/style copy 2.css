@@ -47,100 +47,65 @@ body{
 .nav-link:hover{ background:#fff; color:var(--brand); }
 
 /* ===== Hero ===== */
-.hero{
-  text-align:center;
-  background:var(--bg);
-  padding:40px 20px;
+.hero {
+  text-align: center;
+  background: var(--bg);
+  padding: 40px 20px;
 }
-.hero h1{
-  font-size:clamp(28px, 5vw, 44px);
-  margin-bottom:6px;
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin-bottom: 6px;
 }
-.subtitle{
-  color:var(--muted);
-  margin-bottom:18px;
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 18px;
 }
 
-/* ===== Evitar corte pelo navbar nas âncoras ===== */
-#home, #sobre, #servicos, #contato{
+/* ===== Ajuste de rolagem para evitar corte pelo navbar ===== */
+#home, #sobre, #servicos, #contato {
   scroll-margin-top: calc(var(--nav-h) + 8px);
 }
 
 /* ===== About (Sobre Mim) ===== */
-/* Grid com 2 colunas: imagem (1) + conteúdo (2) */
 .about-section{
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:28px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
   align-items: center;
 }
-
-.about-media {
-  order: 2; /* força a imagem a vir depois */
-}
-
-.about-content {
-  order: 1; /* força o texto a vir antes */
-}
-
-
-/* Achata o wrapper para posicionar os filhos direto no grid */
-.about-content{
-  display:contents;
-}
-
-/* Título ocupa as duas colunas e alinha à esquerda */
-.about-content h2{
-  grid-column:1 / -1;
-  color:var(--brand);
-  font-size:clamp(20px, 3.4vw, 28px);
-  margin-bottom:12px;
-  text-align:left;
-}
-
-/* Demais elementos do conteúdo ficam na 2ª coluna */
-.about-content p,
-.about-list,
-.about-actions{
-  grid-column:2;
-  text-align:left;
-}
-
-/* Mídia fica na 1ª coluna */
-.about-media{ grid-column:1; }
 .about-media img{
-  width:100%;
-  height:auto;
-  border-radius:16px;
-  box-shadow:0 10px 24px rgba(0,0,0,.08);
-  object-fit:cover;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  object-fit: cover;
 }
-
-/* Lista e itens */
+.about-content h2{
+  color: var(--brand);
+  margin-bottom: 12px;
+  font-size: clamp(20px, 3.4vw, 28px);
+}
+.about-content p{ color: var(--muted); margin-bottom: 14px; }
 .about-list{
-  list-style:none;
-  display:grid;
-  gap:8px;
-  margin:8px 0 16px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 16px;
 }
 .about-list li{
-  background:#fff7fc;
-  border:1px solid #ffe0f1;
-  padding:10px 12px;
-  border-radius:10px;
+  background: #fff7fc;
+  border: 1px solid #ffe0f1;
+  padding: 10px 12px;
+  border-radius: 10px;
 }
+.about-actions{ display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* ===== Títulos e parágrafos das demais seções ===== */
-.section h2{
-  color:var(--brand);
-  font-size:clamp(20px, 3.4vw, 28px);
-  margin-bottom:12px;
-  text-align:left;
-}
-.section p{
-  color:var(--muted);
-  margin-bottom:14px;
-  text-align:left;
+@media (max-width: 860px){
+  .about-section{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-actions{ justify-content: center; }
 }
 
 /* ===== Buttons ===== */
@@ -166,10 +131,10 @@ body{
 /* ===== Message ===== */
 .message{
   margin-top:16px; font-weight:700;
-  color:#222; min-height:1.2em;
+  color:#222; min-height: 1.2em;
 }
 
-/* ===== Footer ===== */
+/* ===== Sections & footer ===== */
 .section h3{ color:var(--brand); margin-bottom:8px; }
 .footer{
   padding:24px 0; color:#fff; background:var(--brand);
@@ -178,22 +143,12 @@ body{
 
 /* ===== Acessibilidade / foco ===== */
 a:focus, button:focus{
-  outline:3px solid #ffd3ea;
-  outline-offset:2px;
+  outline: 3px solid #ffd3ea;
+  outline-offset: 2px;
 }
 
 /* ===== Responsivo ===== */
-@media (max-width:860px){
-  .about-section{ grid-template-columns:1fr; }
-  .about-media,
-  .about-content h2,
-  .about-content p,
-  .about-list,
-  .about-actions{
-    grid-column:1;
-  }
-}
-@media (max-width:720px){
+@media (max-width: 720px){
   .nav-links{ gap:12px; flex-wrap:wrap; justify-content:flex-end; }
   .btn{ width:100%; justify-content:center; }
 }

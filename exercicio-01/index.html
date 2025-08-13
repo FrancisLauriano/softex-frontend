@@ -1,25 +1,87 @@
+<!-- index.html: -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Primeiro Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="icon-panda.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Minha Logo</div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="icon-panda.png" alt="Logo Panda">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Início</a></li>
+        <li><a href="#sobre" id="linkSobre" class="nav-link">Sobre Mim</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h1>Olá, mundo!!!</h1>
-    <h2>Meu primeiro site</h2>
-    <p>Primeiro parágrafo.</p>
-    <p>Segundo parágrafo.</p>
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
+    <h1>Bem-vindos à minha página</h1>
+    <p class="subtitle">Sou uma pessoa apaixonada por tecnologia</p>
+  </section>
 
-    <button onclick="mostrarMensagem()">Clique Aqui</button>
-    <p id="mensagem"></p>
-
-    <script src="script.js"></script>
+  <main class="container">
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="card section about-section">
+      <div class="about-media">
+        <img src="avatar.jpg" alt="Foto de Francis">
+      </div>
+      <div class="about-content">
+        <h2>Sobre mim</h2>
+        <p>
+          Olá! Sou Francis, apaixonada por tecnologia, curiosa e sempre em busca de aprender.
+          Gosto de criar soluções que ajudem pessoas no dia a dia.
+        </p>
+        <ul class="about-list">
+          <li>👩‍💻 Áreas de interesse: Frontend, APIs e Cloud</li>
+          <li>📚 Sempre estudando: JavaScript, React e boas práticas</li>
+          <li>✈️ Hobbies: <strong>ler</strong> e <strong>viajar</strong></li>
+        </ul>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="#contato">Falar comigo</a>
+        </div>
+        <p id="mensagem-sobre" class="message"></p>
+      </div>
+    </section>
     
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="card section">
+      <h3>Serviços</h3>
+      <p>Em breve: projetos, portfólio e serviços.</p>
+      <div class="actions">
+        <button class="btn btn-outline" id="btnGithub">
+          <span>Meu GitHub</span>
+          <img src="icon-github.png" alt="GitHub" class="icon">
+        </button>
+      </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato" class="card section">
+      <h3>Contato</h3>
+      <p>Fale comigo: email@exemplo.com</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 — Francis</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
